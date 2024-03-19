@@ -24,3 +24,6 @@ function addZero(i) {
 }
 
 showTime();
+
+let img = document.getElementById('pic');
+img.src = ('luffy.jpg')
