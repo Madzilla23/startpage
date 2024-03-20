@@ -6,7 +6,7 @@ function showTime() {
 	let minute = date.toLocaleString("en", { minute: "2-digit" });
 	let second = date.toLocaleString("en", { second: "2-digit" });
 	let day = date.toLocaleString("en", { day: "2-digit" });
-	let month = date.toLocaleString("en", { month: "2-digit" });
+	let month = date.toLocaleString("en", { month: "short" });
 	let year = date.toLocaleString("en", { year: "numeric" });
 
 	minute = addZero(minute);
@@ -14,7 +14,10 @@ function showTime() {
 
 	document.getElementById(
 		"date"
-	).innerHTML = `${today}, ${hour}:${minute}:${second} | ${day}/${month}/${year}`;
+	).innerHTML = `${today}, ${day} ${month} ${year}`;
+	document.getElementById(
+		"time"
+	).innerHTML = ` ${hour}:${minute}:${second}`;
 	setTimeout(showTime, 0);
 }
 
@@ -26,4 +29,4 @@ function addZero(i) {
 showTime();
 
 let img = document.getElementById('pic');
-img.src = ('luffy.jpg')
+img.src = ('Gojo Change.jpeg')
